@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return generateCookie();" id="myform">
+  First name:<br>
+  <input name="firstname">
+  <br>
+  Last name:<br>
+  <input <input name="lastname">
+  <br><br>
+<button>Send</button></form>
+
+
+</body>
+
+<script>
+
+//document.cookie = "username=John Doe; path=/";
+
+function generateCookie() {
+
+
+  var firstname = document.forms["myform"]["firstname"].value;//This gets your value
+  var lastname = document.forms["myform"]["lastname"].value;//This gets your value
+
+
+  document.cookie = 'username=' + firstname + ' ' + lastname + '; path=/';
+  location.reload();
+  return false;
+}
+
+
+</script>
+
+</html>
